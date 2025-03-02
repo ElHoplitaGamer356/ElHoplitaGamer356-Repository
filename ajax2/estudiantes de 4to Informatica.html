@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Estudiante por Código MINERD</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+
+
+
+<body>
+
+
+    <h2>Buscar Estudiante por Código MINERD</h2>
+    <form id="userForm">
+
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" readonly>
+        <br><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" readonly>
+        <br><br>
+
+        <label for="fecha-de-nacimiento">Fecha de Nacimiento:</label>
+        <input type="text" id="fecha-de-nacimiento" name="fecha-de-nacimiento" readonly>
+        <br><br>
+
+        <label for="edad">Edad:</label>
+        <input type="text" id="edad" name="edad" readonly>
+        <br><br>
+
+        <label for="sexo">Sexo:</label>
+        <input type="text" id="sexo" name="sexo" readonly>
+        <br><br>
+
+        <label for="cod-MINERD">Código MINERD:</label>
+        <input type="text" id="cod-MINERD" name="cod-MINERD" placeholder="Ingrese el Código MINERD">
+        <button type="button" id="buscarEstudiantes">Buscar</button>
+        <br><br>
+
+        <label for="curso">Curso:</label>
+        <input type="text" id="curso" name="curso" readonly>
+        <br><br>
+    </form>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+    $(document).ready(function() {
+        $("#buscarEstudiantes").click(function() {
+            var codigoMINERDIngresado = $("#cod-MINERD").val().trim();
+
+            if (codigoMINERDIngresado === "") {
+                alert("Por favor, ingrese un Código MINERD.");
+                return;
+            }
+
+            $.ajax({
+                url: "ajax/estudiantes.json",
+                type: "GET",
+                dataType: "json",
+                success: function(data) {
+                    var EstudianteEncontrado = data.Estudiantes.find(user => user.cod_MINERD === codigoMINERDIngresado);
+
+                    if (EstudianteEncontrado) {
+                        $("#cod-MINERD").val(EstudianteEncontrado.cod_MINERD);
+                        $("#nombre").val(EstudianteEncontrado.nombre);
+                        $("#apellido").val(EstudianteEncontrado.apellido);
+                        $("#fecha-de-nacimiento").val(EstudianteEncontrado.fecha_de_nacimiento);
+                        $("#sexo").val(EstudianteEncontrado.sexo);
+                        $("#curso").val(EstudianteEncontrado.curso);
+
+                        
+
+
+                        var edadCalculada = calcularEdad(EstudianteEncontrado.fecha_de_nacimiento);
+                        $("#edad").val(edadCalculada);
+                    } else {
+                        alert("No se encontró un estudiante con ese Código MINERD.");
+                        $("#cod-MINERD, #nombre, #apellido, #fecha-de-nacimiento, #sexo, #curso, #edad").val("");
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error al buscar estudiante:", error);
+                    alert("Error al buscar el estudiante. Verifique la conexión o la estructura del archivo JSON.");
+                }
+            });
+        });
+    });
+
+    
+
+    function calcularEdad(fechaNacimiento) {
+        if (!fechaNacimiento) return ""; 
+
+        const hoy = new Date();
+        const nacimiento = new Date(fechaNacimiento);
+        let edad = hoy.getFullYear() - nacimiento.getFullYear();
+        const mes = hoy.getMonth() - nacimiento.getMonth();
+        const dia = hoy.getDate() - nacimiento.getDate();
+
+        
+        if (mes < 0 || (mes === 0 && dia < 0)) {
+            edad--;
+        }
+        return edad >= 0 ? edad : ""; 
+    }
+
+    </script>
+
+
+
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
