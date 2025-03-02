@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Usuario por Cédula</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+
+
+
+
+<body>
+    
+
+
+
+    <h2>Buscar Usuario por Cédula</h2>
+
+    <form id="userForm">
+
+        <label for="cedula">Cédula:</label>
+        <input type="text" id="cedula" name="cedula" placeholder="Ingrese la cédula">
+        <button type="button" id="buscarUsuario">Buscar</button>
+        <br><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" readonly>
+        <br><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" readonly>
+        <br><br>
+
+        <label for="correo">Correo:</label>
+        <input type="text" id="correo" name="correo" readonly>
+        <br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" readonly>
+        <br><br>
+
+    </form>
+
+
+
+<script src="js/jquery-3.6.0.min.js"></script>  
+
+
+<script>  
+$(document).ready(function(){  
+    $("#buscarUsuario").click(function(){  
+        var cedulaIngresada = $("#cedula").val();  
+
+        $.ajax({  
+            url: "ajax/data_lista.json", // Archivo JSON con los datos simulados  
+            type: "GET",  
+            dataType: "json",  
+            success: function(data) {  
+                var usuarioEncontrado = data.usuarios.find(user => user.cedula === cedulaIngresada);  
+
+                if (usuarioEncontrado) {  
+                    $("#nombre").val(usuarioEncontrado.nombre);  
+                    $("#apellido").val(usuarioEncontrado.apellido);  
+                    $("#correo").val(usuarioEncontrado.correo);  
+                    $("#telefono").val(usuarioEncontrado.telefono);  
+                } else {  
+                    alert("No se encontró un usuario con esa cédula.");  
+                    $("#nombre, #apellido, #correo, #telefono").val(""); // Limpiar campos  
+                }  
+            },  
+            error: function() {  
+                alert("Error al buscar el usuario.");  
+            }  
+        });  
+    });  
+});  
+
+
+</script>
+
+
+
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

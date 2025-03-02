@@ -1,0 +1,32 @@
+{
+    "usuarios": [
+        {"nombre": "Adriel Abraham", "apellido": "Abreu Trinidad", "fecha-de-nacimiento": "08/09/2009", "sexo": "M", "numero-de-orden": "#1", "curso": "4to informática"},
+        {"nombre": "Franchesca Sther", "apellido": "Alcantara", "fecha-de-nacimiento": "27/02/2009", "sexo": "F", "numero-de-orden": "#2", "curso": "4to informática"},
+        {"nombre": "Tanya Lisbette", "apellido": "Alcantara", "fecha-de-nacimiento": "06/07/2009", "sexo": "F", "numero-de-orden": "#3", "curso": "4to informática"},
+        {"nombre": "Medelyn Yelitza", "apellido": "Algarrobo Matos", "fecha-de-nacimiento": "19/05/2009", "sexo": "F", "numero-de-orden": "#4", "curso": "4to informática"},
+        {"nombre": "Génesis Aideliz", "apellido": "Caminero Manzanillo", "fecha-de-nacimiento": "28/07/2009", "sexo": "F", "numero-de-orden": "#6", "curso": "4to informática"},
+        {"nombre": "Abraham Castillo", "apellido": "Montero", "fecha-de-nacimiento": "27/08/2009", "sexo": "M", "numero-de-orden": "#7", "curso": "4to informática"},
+        {"nombre": "Jefferson", "apellido": "Díaz Romero", "fecha-de-nacimiento": "25/01/2009", "sexo": "M", "numero-de-orden": "#9", "curso": "4to informática"},
+        {"nombre": "Francisco Javier", "apellido": "Feliz Morillo", "fecha-de-nacimiento": "29/09/2008", "sexo": "M", "numero-de-orden": "#12", "curso": "4to informática"},
+        {"nombre": "Weidy Soiret", "apellido": "Garo Meran", "fecha-de-nacimiento": "27/09/2009", "sexo": "F", "numero-de-orden": "#14", "curso": "4to informática"},
+        {"nombre": "Yadier", "apellido": "Hernandez Vazquez", "fecha-de-nacimiento": "13/12/2009", "sexo": "M", "numero-de-orden": "#15", "curso": "4to informática"},
+        {"nombre": "Juan David", "apellido": "Hidalgo García", "fecha-de-nacimiento": "08/01/2010", "sexo": "M", "numero-de-orden": "#16", "curso": "4to informática"},
+        {"nombre": "Dauri Daniel", "apellido": "Jiménez Mejía", "fecha-de-nacimiento": "06/04/2010", "sexo": "M", "numero-de-orden": "#17", "curso": "4to informática"},
+        {"nombre": "Rafael Emilio", "apellido": "Lara Medina", "fecha-de-nacimiento": "06/11/2008", "sexo": "M", "numero-de-orden": "#18", "curso": "4to informática"},
+        {"nombre": "Wander Félix", "apellido": "Martínez Martínez", "fecha-de-nacimiento": "21/07/2009", "sexo": "M", "numero-de-orden": "#19", "curso": "4to informática"},
+        {"nombre": "Aaron Daniel", "apellido": "Matos Arias", "fecha-de-nacimiento": "15/05/2010", "sexo": "M", "numero-de-orden": "#20", "curso": "4to informática"},
+        {"nombre": "Yuneiri Rachel", "apellido": "Mena Sánchez", "fecha-de-nacimiento": "04/01/2009", "sexo": "M", "numero-de-orden": "#21", "curso": "4to informática"},
+        {"nombre": "Johancel", "apellido": "Montero de Los Santos", "fecha-de-nacimiento": "29/08/2009", "sexo": "F", "numero-de-orden": "#22", "curso": "4to informática"},
+        {"nombre": "Elian Moises", "apellido": "Núñez Ferrera", "fecha-de-nacimiento": "19/12/2009", "sexo": "M", "numero-de-orden": "#23", "curso": "4to informática"},
+        {"nombre": "Angel Emmanuel", "apellido": "Ortiz Vargas", "fecha-de-nacimiento": "15/09/2009", "sexo": "M", "numero-de-orden": "#24", "curso": "4to informática"},
+        {"nombre": "Diego Sebastián", "apellido": "Parra Guridis", "fecha-de-nacimiento": "29/06/2009", "sexo": "M", "numero-de-orden": "#25", "curso": "4to informática"},
+        {"nombre": "Ray Azbell", "apellido": "Pérez Reyna", "fecha-de-nacimiento": "01/12/2008", "sexo": "M", "numero-de-orden": "#26", "curso": "4to informática"},
+        {"nombre": "Severino", "apellido": "Perez Valdez", "fecha-de-nacimiento": "05/10/2009", "sexo": "M", "numero-de-orden": "#27", "curso": "4to informática"},
+        {"nombre": "Felix", "apellido": "Ramos", "fecha-de-nacimiento": "25/08/2009", "sexo": "M", "numero-de-orden": "#29", "curso": "4to informática"},
+        {"nombre": "Norbert Antonio", "apellido": "Santana Acosta", "fecha-de-nacimiento": "31/01/2009", "sexo": "M", "numero-de-orden": "#31", "curso": "4to informática"},
+        {"nombre": "Niulka", "apellido": "Stval Denis", "fecha-de-nacimiento": "15/06/2008", "sexo": "F", "numero-de-orden": "#32", "curso": "4to informática"},
+        {"nombre": "Maxwell Aniel", "apellido": "Tavárez Ortiz", "fecha-de-nacimiento": "27/12/2009", "sexo": "M", "numero-de-orden": "#33", "curso": "4to informática"},
+        {"nombre": "Greimy Jameling", "apellido": "Viola De León", "fecha-de-nacimiento": "12/08/2009", "sexo": "F", "numero-de-orden": "#34", "curso": "4to informática"},
+        {"nombre": "Loammy", "apellido": "Willmore Sierra", "fecha-de-nacimiento": "15/10/2009", "sexo": "F", "numero-de-orden": "#35", "curso": "4to informática"}
+    ]
+}
